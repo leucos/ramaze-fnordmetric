@@ -1,0 +1,16 @@
+# Ignore build related files
+doc
+pkg/*.gem
+.bundle
+.gems
+vendor
+
+# Ignore common crap
+.DS_Store
+Thumbs.db
+
+# Keep those funky gitkeep files
+!.gitkeep
+coverage
+
+Gemfile.lock
