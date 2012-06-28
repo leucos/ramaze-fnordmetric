@@ -1,13 +1,13 @@
 path = File.expand_path('../', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = 'ramaze-fnordmetric-helper'
+  s.name        = 'ramaze-fnordmetric'
   s.version     = '0.1'
   s.date        = '2012-06-21'
   s.authors     = ['Michel Blanc']
   s.email       = 'mblanc@erasme.org'
   s.summary     = 'A simple fnordmetric helper for Ramaze.'
-  s.homepage    = 'https://github.com/leucos/ramaze-fnordmetric-helper'
+  s.homepage    = 'https://github.com/leucos/ramaze-fnordmetric'
   s.description = s.summary
   s.files       = `cd #{path}; git ls-files`.split("\n").sort
   s.has_rdoc    = 'yard'
