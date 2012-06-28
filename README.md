@@ -3,8 +3,8 @@ Ramaze::Helper::Fnordmetric
 
 [![Build Status](https://secure.travis-ci.org/leucos/ramaze-fnordmetric.png?branch=master)](http://travis-ci.org/leucos/ramaze-fnordmetric)
 
-* A [Ramaze][1] helper that makes it easy to use [Fnordmetric][2] in your
-  Ramaze web-applications *
+__A [Ramaze][1] helper that makes it easy to use [Fnordmetric][2] in your
+  Ramaze web-applications__
 
 ----
 
@@ -40,7 +40,7 @@ fork / change / run specs / commit / send PR (devel branch)
 License
 -------
 
-ramaze-fnordmetric is licensed under the MIT license :
+`ramaze-fnordmetric` is licensed under the MIT license :
 
 Copyright (c) 2012, Michel Blanc
 
