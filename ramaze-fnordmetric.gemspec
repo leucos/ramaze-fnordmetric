@@ -2,7 +2,7 @@ path = File.expand_path('../', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'ramaze-fnordmetric'
-  s.version     = '0.0.9'
+  s.version     = '0.0.10.pre.1'
   s.date        = '2012-06-21'
   s.authors     = ['Michel Blanc']
   s.email       = 'mblanc@erasme.org'
