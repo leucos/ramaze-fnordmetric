@@ -331,5 +331,5 @@ THE SOFTWARE.
 
   [1]: https://github.com/ramaze/ramaze
   [2]: https://github.com/paulasmuth/fnordmetric
-  [3]: http://http://rubydoc.info/github/leucos/ramaze-fnordmetric/master/frames
+  [3]: http://rubydoc.info/github/leucos/ramaze-fnordmetric/master/frames
   [4]: https://github.com/leucos/ramaze-fnordmetric
