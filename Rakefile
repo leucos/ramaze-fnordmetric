@@ -15,3 +15,6 @@ module Ramaze
     end
   end
 end
+
+task :default => :bacon
+
