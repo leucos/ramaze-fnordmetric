@@ -29,8 +29,10 @@ module Ramaze
     #
     #   trait :fnord_redis_url => "redis://redis.example.com:6332"
     #
-    # TODO: @example Basic usage...
-    # TODO: Implement with_id that uses specific id instead of innate.sid
+    # TODO: @example Basic usage here...
+    # TODO: Implement optional with_id that uses specific id instead of innate.sid in conjunction with...
+    # TODO: simple keys instead of list, for the above
+    #
     module Fnordmetric
       # @@fnord will hold Fnordmetric API instance
       # @@redis holds a Redis connection
@@ -45,23 +47,6 @@ module Ramaze
       def self.included(base)
         Ramaze::Log.debug("Fnordmetric helper is being included in %s" % base.name)
         base.extend(ClassMethods)
-      end
-
-      ##
-      # Creates a fnordmetric instance, holding the Redis connection
-      #
-      # Do not call this
-      def _connect # :nodoc:
-        Ramaze::Log.debug("In connect")
-        begin
-          url = ancestral_trait[:fnord_redis_url]
-        rescue
-          url = "redis://localhost:6379"
-        ensure
-          @@fnord = FnordMetric::API.new(:redis_url => url)
-          @@redis = Redis.new(:url => url)
-          Ramaze::Log.debug("Connected to FnordMetric")
-        end
       end
 
       ##
@@ -125,7 +110,7 @@ module Ramaze
       #
       def push_timer(event_name, args = {})
         _connect unless @@redis
-        @@redis.set(_key, [event_name, args, Time.now.to_f].to_json)
+        @@redis.lpush(_key, [event_name, args, Time.now.to_f].to_json)
         @@redis.expire(_key, _ttl)
         Ramaze::Log.debug("Timer pushed and TTL set to %s for %s to %s (stack level is now %s)" % 
           [ _ttl,
@@ -234,14 +219,36 @@ module Ramaze
         event(:_set_picture, :url => url)
       end
 
+      private 
+
+      ##
+      # Creates a fnordmetric instance, holding the Redis connection
+      #
+      #:nocov:
+      def _connect 
+        Ramaze::Log.debug("In connect")
+        begin
+          url = ancestral_trait[:fnord_redis_url]
+        rescue
+          url = "redis://localhost:6379"
+        ensure
+          @@fnord = FnordMetric::API.new(:redis_url => url)
+          @@redis = Redis.new(:url => url)
+          Ramaze::Log.debug("Connected to FnordMetric")
+        end
+      end
+      #:nocov:
+      
       ##
       # Returns the Redis key
       #
-      #
-      def _key # :nodoc:
+      def _key
         "%s.%s" % [ @@sstack_key_root, session.sid ]
       end
 
+      ##
+      # Returns the ttl to use for internal keys
+      #
       def _ttl
         ancestral_trait[:fnord_helper_key_ttl] || Innate::Session.options.ttl
       end
@@ -294,13 +301,6 @@ module Ramaze
         end
       end
 
-      class Timer
-        def initialize
-        end
-
-        def pop
-        end
-      end
     end
   end
 end
