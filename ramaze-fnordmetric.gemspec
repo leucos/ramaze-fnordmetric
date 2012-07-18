@@ -2,7 +2,7 @@ path = File.expand_path('../', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'ramaze-fnordmetric'
-  s.version     = '0.1'
+  s.version     = '0.0.9'
   s.date        = '2012-06-21'
   s.authors     = ['Michel Blanc']
   s.email       = 'mblanc@erasme.org'
@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('bacon'    , ['>= 1.1.0'])
   s.add_development_dependency('rdiscount', ['>= 1.6.8'])
   s.add_development_dependency('rack-test', ['>= 0.6.1'])
+  s.add_development_dependency('simplecov')
 end
