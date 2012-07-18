@@ -1,4 +1,10 @@
-require File.expand_path('../lib/ramaze/helper/fnordmetric', __FILE__)
+task_dir = File.expand_path('../task', __FILE__)
+
+Dir.glob("#{task_dir}/*.rake").each do |f|
+  import(f)
+end
+
+#require File.expand_path('../../lib/ramaze/helper/fnordmetric', __FILE__)
 
 module Ramaze
   module Helper
@@ -8,10 +14,4 @@ module Ramaze
       )
     end
   end
-end
-
-task_dir = File.expand_path('../task', __FILE__)
-
-Dir.glob("#{task_dir}/*.rake").each do |f|
-  import(f)
 end
