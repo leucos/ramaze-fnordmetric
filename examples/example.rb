@@ -30,7 +30,7 @@ This example uses push_timer/pop_timer methods
   end
 </pre>
 
-If you run 'fn.rb' (bundle exec fn.rb run), you can check this <a href='http://localhost:4242'>link</a> to get the Fnordmetric dashboard.
+If you run 'fn.rb' (bundle exec fn.rb run), you can check this <a href='http://localhost:4242' target='_blank'>link</a> to get the Fnordmetric dashboard.
 <p />
 Sorry for the wait... but congratulations won a vanilla Icecream <a href='/icecream'>Icecream</a> ! May be you prefer <a href='/icecream/strawberry'>strawberry</a>. ?
 EOF
@@ -50,7 +50,7 @@ This example uses event to send an event to Fnordmetric.
   end
 </pre>
 
-If you run 'fn.rb' (bundle exec fn.rb run), you can check the icecreams <a href='http://localhost:4242/example#dashboard/Overview'>page</a><p />
+If you run 'fn.rb' (bundle exec fn.rb run), you can check the icecreams <a href='http://localhost:4242/example#dashboard/Overview' target='_blank'>page</a><p />
 Sorry for the wait... You won a vanilla Icecream <a href='/icecream'>Icecream</a>. May be you prefer <a href='/icecream/strawberry'>strawberry</a> ? <p />
 If you wish, we can <a href='/deliver'>deliver</a> the icecream to your door, but it might take some time, be patient.
 
@@ -71,7 +71,7 @@ This example uses 'clock' to measure the time taken by a controller method.
   clock :deliver, :delivery_performance
 </pre>
 
-If you run 'fn.rb' (bundle exec fn.rb run), you can check the performance <a href='http://localhost:4242/example#dashboard/Performance'>tab</a><p />
+If you run 'fn.rb' (bundle exec fn.rb run), you can check the performance <a href='http://localhost:4242/example#dashboard/Performance' target='_blank'>tab</a><p />
 Your icecream has been delivered. You can get <a href='/deliver'>another one</a> or go to the <a href='/'>index</a> page.<p />
 EOF3
   end
