@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('ramaze', ['>= 2011.07.25'])
   s.add_dependency('redis', ['>= 2.2.0'])
-  s.add_dependency('fnordmetric', ['>= 0.9.7'])
+  s.add_dependency('fnordmetric', ['~> 0.9.7'])
 
   s.add_development_dependency('rake'     , ['>= 0.9.2'])
   s.add_development_dependency('yard'     , ['>= 0.7.2'])
