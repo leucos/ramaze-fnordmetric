@@ -15,6 +15,13 @@ Code metrics and event recording a-gogo.
 
 See examples below.
 
+Documentation
+-------------
+
+You can generate the doc with yard, or just brows it online on
+[Rubydoc][3].
+The source is hoster on [GitHub][4].
+
 Usage
 -----
 
@@ -324,5 +331,5 @@ THE SOFTWARE.
 
   [1]: https://github.com/ramaze/ramaze
   [2]: https://github.com/paulasmuth/fnordmetric
-
-
+  [3]: http://http://rubydoc.info/github/leucos/ramaze-fnordmetric/master/frames
+  [4]: https://github.com/leucos/ramaze-fnordmetric
