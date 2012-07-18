@@ -20,7 +20,7 @@ Documentation
 
 You can generate the doc with yard, or just brows it online on
 [Rubydoc][3].
-The source is hoster on [GitHub][4].
+The source is hosted on [GitHub][4].
 
 Usage
 -----
