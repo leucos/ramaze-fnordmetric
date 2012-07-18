@@ -11,11 +11,18 @@ __A [Ramaze][1] helper that makes it easy to use [Fnordmetric][2] in your
 Features
 --------
 
+Code metrics and event recording a-gogo.
+
+See examples below.
 
 Usage
 -----
 
 ### Using in your code ###
+
+#### Installing ####
+
+  `gem install ramaze-fnordmetric`
 
 #### Loading the helper ####
 

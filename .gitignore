@@ -4,6 +4,7 @@ pkg/*.gem
 .bundle
 .gems
 vendor
+.yardoc/
 
 # Ignore common crap
 .DS_Store
