@@ -45,7 +45,7 @@ Since this is a Ramaze helper, you can use it just like another helper :
 Since Fnordmetric uses Redis, you can configure the server to use using traits
 in your controller :
 
-trait :fnord_redis_url => "redis://redis.example.com:6332"
+  `trait :fnord_redis_url => "redis://redis.example.com:6332"`
 
 If not, Fnordmetric will use the default redis stuff (`redis://localhost:6379`).
 
