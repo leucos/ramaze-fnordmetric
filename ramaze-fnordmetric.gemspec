@@ -22,4 +22,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rdiscount', ['>= 1.6.8'])
   s.add_development_dependency('rack-test', ['>= 0.6.1'])
   s.add_development_dependency('simplecov')
+  s.add_development_dependency('coveralls')
 end
