@@ -4,9 +4,7 @@ Ramaze::Helper::Fnordmetric
 [![Build Status](https://secure.travis-ci.org/leucos/ramaze-fnordmetric.png?branch=master)](http://travis-ci.org/leucos/ramaze-fnordmetric)
 [![Coverage
 Status](https://coveralls.io/repos/leucos/ramaze-fnordmetric/badge.png?branch=master)](https://coveralls.io/r/leucos/ramaze-fnordmetric)
-[![Code Climate](https://codeclimate.com/github/leucos/ramaze-fnordmetric.png)](https://codeclimate.com/github/leucos/ramaze-fnordmetric.png)
-[![Dependency
-Status](https://gemnasium.com/leucos/ramaze-fnordmetric.png)](https://gemnasium.com/leucos/ramaze-fnormetric)
+[![Code Climate](https://codeclimate.com/github/leucos/ramaze-fnordmetric.png)](https://codeclimate.com/github/leucos/ramaze-fnordmetric)
 
 __A [Ramaze][1] helper that makes it easy to use [Fnordmetric][2] in your
   Ramaze web-applications__
