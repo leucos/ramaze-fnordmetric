@@ -2,6 +2,11 @@ Ramaze::Helper::Fnordmetric
 ===========================
 
 [![Build Status](https://secure.travis-ci.org/leucos/ramaze-fnordmetric.png?branch=master)](http://travis-ci.org/leucos/ramaze-fnordmetric)
+[![Coverage
+Status](https://coveralls.io/repos/leucos/ramaze-fnordmetric/badge.png?branch=master)](https://coveralls.io/r/leucos/ramaze-fnordmetric)
+[![Code Climate](https://codeclimate.com/github/leucos/ramaze-fnordmetric.png)](https://codeclimate.com/github/leucos/ramaze-fnordmetric)
+-[![Dependency-Status](https://gemnasium.com/leucos/ramaze-fnordmetric.png)](https://gemnasium.com/leucos/ramaze-fnormetric)
+
 
 __A [Ramaze][1] helper that makes it easy to use [Fnordmetric][2] in your
   Ramaze web-applications__
@@ -18,7 +23,7 @@ See examples below.
 Documentation
 -------------
 
-You can generate the doc with yard, or just brows it online on
+You can generate the doc with yard, or just browse it online on
 [Rubydoc][3].
 The source is hosted on [GitHub][4].
 
@@ -42,12 +47,12 @@ Since this is a Ramaze helper, you can use it just like another helper :
 
 #### Redis configuration ####
 
-Since Fnordmetric uses Redis, you can configure the server to use using traits
+Since Fnordmetric uses Redis, you can configure the server to use with traits
 in your controller :
 
   `trait :fnord_redis_url => "redis://redis.example.com:6332"`
 
-If not, Fnordmetric will use the default redis stuff (`redis://localhost:6379`).
+If not, Fnordmetric will use the default Redis stuff (`redis://localhost:6379`).
 
 You can also set how long the helper internal structures (timers, see below) 
 will be kept in Redis using `trait :fnord_helper_key_ttl => 3600`
@@ -67,7 +72,8 @@ session id :
     # Associates a user name to the current innate.sid
     set_name("#{user.name} #{user.surname}")
 
-You can also set a picture for the current session, using the gravatar helper for instance :
+You can also set a picture for the current session, using the gravatar
+helper for instance :
 
     # Fnordmetric will display a picture next to the user
     set_picture(gravatar(user.email.to_s)) if user.email
@@ -146,7 +152,7 @@ Easy peasy lemon squeezy.
 
 ### Measuring execution time for block ###
 
-But the helper comes with block (like in &) timing methods too, so we can meke 
+But the helper comes with block (like in &) timing methods too, so we can make 
 the above code event simpler, replacing the inner `push_timer` and `pop_timer` 
 calls with the `times` method :
 
@@ -181,7 +187,7 @@ arg), sending an event named `timing_data` with some arbitrary argument
 Note that `clock` always sets the `:method` key value in the arguments sent in 
 the event, so the tracked method is recorded in Fnordmetric.
 
-Summing up, we can user all those methods like that :
+Summing up, we can use all those methods like that :
 
     def login
       @title = "Connect"
@@ -235,7 +241,7 @@ everything, send events before each method onvocation, etc...
       layout :default
       helper :fnordmetric
 
-      # Let's record all pageviews for all controllers     
+      # Let's record all pageviews for all controllers
       before_all do
         pageview request.env['REQUEST_PATH']
       end
@@ -264,7 +270,7 @@ Here is a small example the show pages views :
     # _pageview is a special Fnordmetric event
     # and as such starts with `_`
     event :_pageview do
-      # increment the daily_uniques gauge by 1 if session_key hasn't been seen
+      # increment the daily_unique gauge by 1 if session_key hasn't been seen
       # in this tick yet
       incr :pageviews_daily_unique
       # increment the pageviews_per_url_daily gauge by 1 where key = 'page2'
@@ -282,12 +288,12 @@ Here is a small example the show pages views :
       :autoupdate => 10
     }
 
-See the `examples/` directory for a worging example.
+See the `examples/` directory for a working example.
 
 Caveats
 -------
 
-If sid changes (e.g. when a user logs in), timers won't pop properly. This
+If `sid` changes (e.g. when a user logs in), timers won't pop properly. This
 doesn't break, but will leave a nasty line in your logs. The next version will
 take care of this.
 
@@ -299,8 +305,8 @@ fork / make a feature branch / change / specs / commit / send PR (devel branch)
 Ack
 ---
 
-Thanks to manveru & yorick for [Ramaze][1]. Man, those Rails zealots just don't 
-realize their pathetic fate :)
+Thanks to @manveru & @YorickPeterse for [Ramaze][1]. Man, those Rails
+zealots just don't realize their pathetic fate :)
 
 License
 -------
@@ -328,8 +334,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-
   [1]: https://github.com/ramaze/ramaze
   [2]: https://github.com/paulasmuth/fnordmetric
   [3]: http://rubydoc.info/github/leucos/ramaze-fnordmetric/master/frames
   [4]: https://github.com/leucos/ramaze-fnordmetric
+
