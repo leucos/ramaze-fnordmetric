@@ -339,3 +339,7 @@ THE SOFTWARE.
   [3]: http://rubydoc.info/github/leucos/ramaze-fnordmetric/master/frames
   [4]: https://github.com/leucos/ramaze-fnordmetric
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/leucos/ramaze-fnordmetric/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
